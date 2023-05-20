@@ -1,0 +1,288 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    font-family: 'Oswald', sans-serif;
+
+}
+
+html{
+    height: 100%;
+}
+
+
+body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    background-color: #fcf9ea;
+}
+
+
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    padding: 1rem;
+    background-color: rgba(34,31,32,0.8);
+
+}
+
+.contenedor-top{
+    background-color: rgba(105,23,23,0.9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+
+}
+
+.contenedor-estrellas{
+
+    animation: mover 6000ms alternate-reverse infinite;
+    position: relative;
+
+}
+
+@keyframes mover {
+    0%{
+        transform: translateX(-100%) ;
+    }
+    50%{
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+
+
+.slide{
+    color:#baa97c ;
+    padding-left: 2px;
+}
+
+
+.contenedor-trofeo{
+    display: flex;
+    text-align: center;
+}
+
+.contenedor-trofeo h4{
+padding-left: 5px;
+color:white;
+display: none;
+}
+
+.trophy{
+color:#baa97c ;
+display: none;
+text-decoration: none;
+}
+
+
+.logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgba(105,23,23,0.9);
+}
+
+h1{
+    color:rgba(105,23,23,0.9);
+}
+
+.logo img{
+    width: 50px;
+}
+
+.logo h2{
+    display: none;
+}
+
+.cabecera img{
+    width: 100%;
+    }
+
+.nav-list {
+    list-style-type: none;
+    display: flex;
+    gap: 1rem;
+}
+
+.nav-list li a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.nav-list li a:hover {
+    cursor: pointer;
+    transition: 0.8s;
+    color: rgba(105,23,23,0.9);
+
+}
+
+.abrir-menu,
+.cerrar-menu {
+    display: none;
+}
+
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.slider-frame{
+    width: 50%;
+    height: auto;
+    overflow: hidden;
+    margin:50px;
+
+}
+
+.slider-frame ul{
+    padding: 0;
+    display: flex;
+    width: 400%;
+
+    animation: muevelo 20s infinite alternate;
+    animation-timing-function: linear;
+
+}
+
+.slider-frame li{
+    list-style: none;
+    width: 100%;
+}
+
+.slider-frame li img{
+    width: 100%;
+}
+
+footer{
+    margin-top: auto;
+}
+
+.redes{
+    background-color: black;
+    display: flex;
+    justify-content: center;
+}
+
+.redes a{
+    color: white;
+    margin:1rem;
+}
+
+.redes a:hover{
+    color:rgba(255, 255, 255, 0.508)
+}
+
+.texto{
+    background: black;
+    color: white;
+    text-align: center;
+}
+
+@keyframes muevelo {
+    0%{margin-left:0%;}
+    20%{margin-left:0%;}
+
+    25%{margin-left:-100%;}
+    45%{margin-left:-100%;}
+
+    50%{margin-left:-200%;}
+    79%{margin-left:-200%;}
+
+    75%{margin-left:-300%;}
+    95%{margin-left:-300%;}
+    
+}
+
+@media screen and (max-width: 700px) {
+
+    .slider-frame{
+        width: 100%;
+        margin:auto;
+    
+    }
+
+    .slide{
+        display: none;
+    }
+
+    .trophy{
+        display:block;
+        color:#baa97c ;
+        }
+        .contenedor-trofeo h4{
+            display:inline;
+        }
+
+    .abrir-menu,
+    .cerrar-menu {
+        display: block;
+        border: 0;
+        font-size: 1.25rem;
+        background-color: transparent;
+        cursor: pointer;
+    }
+
+    .abrir-menu {
+        color: white;
+    }
+
+    .cerrar-menu {
+        color: #ececec;
+    }
+
+    .nav {
+        opacity: 0;
+        visibility: hidden;
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        gap: 1rem;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #1c1c1c;
+        padding: 2rem;
+        box-shadow: 0 0 0 100vmax rgba(0, 0, 0, .5);
+    }
+
+    .nav.visible {
+        opacity: 1;
+        visibility: visible;
+    }
+    
+    .nav-list {
+        flex-direction: column;
+        align-items: end;
+    }
+
+    .nav-list li a {
+        color: #ecececec;
+    }
+}
+
+@media(max-width: 420px){
+    .logo h1{
+        display: none;
+    }
+    
+    .logo h2{
+        display: block;
+    }
+    }
